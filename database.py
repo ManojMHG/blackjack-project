@@ -3,8 +3,8 @@ import mysql.connector
 def get_connection():
     return mysql.connector.connect(
         host="localhost",
-        user="root",
-        password="@Asdffdsa17",
+        user="",
+        password="",
         database="blackjack_db"
     )
 def save_result(username, player_score, dealer_score, result):
@@ -28,4 +28,5 @@ def view_scores(username):
     print("-" * 50)
     for row in rows:
         timestamp = row[3].strftime('%d/%m/%Y %H:%M:%S')
+
         print(f"{timestamp} |   {row[0]}   |   {row[1]}   | {row[2]}")
